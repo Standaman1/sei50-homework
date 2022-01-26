@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mountains</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+    <nav>
+      <h1>Mountains - The World's Most Famous Family of Serial Killers</h1>
+      <!-- <a href="<%= mountains_path %>">All Serial Ki... Mountains</a> -->
+      <%= link_to 'All Serial Ki... Mountains', mountains_path %> 
+
+
+    </nav>
+    <br>
+
+
+    <%= link_to '/mountains' do %>
+      
+      <img src="https://dyn1.heritagestatic.com/lf?set=path%5B2%2F0%2F5%2F0%2F205086%5D&call=url%5Bfile%3Agcd.chain%5D" alt="mountainicon" width= "150vh">
+      
+    <% end %>
+
+
+    <%= yield %>
+
+
+    <br>
+    <footer>
+    &copy; Daniel's NOT the Winner Incorporated 2022
+    </footer>
+
+
+  </body>
+</html>

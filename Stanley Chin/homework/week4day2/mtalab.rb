@@ -33,7 +33,7 @@
 # * Make sure the stops that are the same for different lines have different names (i.e. 23rd on the N and on the 6 need to be differentiated)
 
 # plan_trip( :n, "Times Square", :l, "1st" )
-
+require colorize
 def single_trip(start_line, start_stop, end_stop)
     subway = {
         :N => ["Times Square", "34th", "28th", "23rd", "Union Square","8th"],
@@ -73,7 +73,7 @@ def plan_trip(start_line, start_stop, end_line, end_stop)
     elsif start_line == end_line
         trip_total = single_trip(start_line, start_stop, end_stop)
 
-        p ("You must start on the #{start_line} line and travel through #{trip_total.join(', ')} for a total of #{trip_total.length} stops")
+        puts ("You must start on the #{start_line} line and travel through #{trip_total.join(', ')} for a total of #{trip_total.length} stops")
 
         #elsif start_stop || end_stop == Union Square for better outpit
     else        
@@ -86,12 +86,12 @@ def plan_trip(start_line, start_stop, end_line, end_stop)
         trip_total = [trip_one, trip_two].flatten
         # num_of_stops = trip_total.length
 
-        p ("You must start on the #{start_line} line and travel through #{trip_one.join(', ')} and change at Union Square and then go to the #{end_line} line and travel through #{trip_two.join(', ')} for a total of #{trip_total.length} stops")
+        puts ("You must start on the #{start_line} line and travel through #{trip_one.join(', ')} and change at Union Square and then go to the #{end_line} line and travel through #{trip_two.join(', ')} for a total of #{trip_total.length} stops")
 
     end
 end
 
-plan_trip("6", "Union Square", "6", "23rd")
+plan_trip("6", "23rd", :N, "Times Square")
 
 # plan_trip(:N, "Times Square", :L, "Union Square")
 #how to colorize

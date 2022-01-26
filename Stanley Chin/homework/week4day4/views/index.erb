@@ -1,0 +1,18 @@
+<h4>
+Index of NFL Fantasy Players Statistics for Week 
+</h4>
+
+
+<ul>
+    <% @results.each do |nflplayer|  %>
+    <li>
+    <a href="/nflplayers/<%= nflplayer["id"] %>"></a>
+    <%= nflplayer["firstname"] %>
+    <%= nflplayer["lastname"] %> - Points in Week <%= nflplayer["week"] %> : <%= nflplayer["fantasypoints"] %>
+    
+    </li>
+
+    <%# Can you do like an average score calculation here  %>
+    <% end  %>
+
+</ul>

@@ -1,0 +1,22 @@
+<h2>Mountains Baby!</h2>
+
+
+<ul class="bullets">
+
+    <% @mountains.each do |mountain| %>
+        
+        <li>
+            <!--            
+            <a href="/mountains/<%= mountain.id %>">
+            <%= mountain.name %>
+            </a>
+            -->
+
+            <%= link_to mountain.name, mountain_path(mountain.id) %>
+
+        </li>
+
+    <% end %>
+
+
+</ul>

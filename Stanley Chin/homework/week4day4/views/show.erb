@@ -1,0 +1,33 @@
+<h3>
+Fantasy Points for <%= @nflplayer["firstname"] %> <%= @nflplayer["lastname"] %> 
+<%# how to access variable from defined route in link %>
+</h3>
+<a href="/nflplayers/<%= @nflplayer['id'] %>/edit">Edit</a>
+|
+<a href="/nflplayers/<%= @nflplayer['id'] %>/delete">Delete</a>
+
+
+<p>
+<strong>Week: </strong><%= @nflplayer["week"] %>
+</p>
+
+
+<p>
+<strong>Fantasy Points: </strong><%= @nflplayer["fantasypoints"] %>
+</p>
+
+<p>
+<strong>Injured: </strong>
+<%# if @nflplayer['alive'] == 1 %>
+    <%#Yes  %>
+<%# else %>
+    <%# NO  %>
+<%# end  %>
+
+<%# can use ternary for above %>
+
+<%= @nflplayer["injury"] == 1 ? "No" : "Yes" %>
+</p>
+
+
+<img src="<%= @nflplayer["image_url"] %>" alt="<%=@nflplayer["lastname"]%>" class="player_image">

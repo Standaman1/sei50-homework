@@ -1,0 +1,26 @@
+<h3>
+    Edit Statistics for: <%= @nflplayer['name'] %>
+</h3>
+
+<form action="/nflplayers/<%= @nflplayer['id'] %>" method="post">
+  <label>
+    Name:
+    <input type="text" name="week" value ="<%=@nflplayer['week']%>">
+  </label>
+  <br>
+  <label>
+    Fantasy Points:
+    <input type="text" name="fantasypoints" value="<%= @nflplayer['fantasypoints'] %>">
+  </label>
+  <br>
+  <label>
+    Injured (0 for yes, 1 for no):
+    <input type="text" name="alive" value="<%= @nflplayer['alive'] %>">
+  </label>
+  <br>
+    Image URL:
+    <input type="text" name="image_url" value="<%= @nflplayer['image_url'] %>">
+  </label>
+  <br>
+  <button>Update NFL Player Statistics</button>
+</form>

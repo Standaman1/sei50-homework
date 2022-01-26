@@ -1,0 +1,16 @@
+<h2><%= @results["total_results"] %> number of results your search </h2> <h1><%=params[:titlename]%></h1> 
+
+<ul>
+<% @results["results"].each do |movie|%>
+    
+        <h4>Movie title is:</h4> <%= movie["original_title"] %><br>
+        <h4>It was released on:</h4> <%= movie["release_date"] %><br>
+        <h4>The plot:</h4> <%= movie["overview"] %><br>
+         
+         
+         <a href = "/movie?id=><%= movie["id"]" %>
+
+    <src = "https://image.tmdb.org/t/p/original/"<%= movie["poster_path"]%>"
+    #"<pre>#{@results}</pre>"
+<% end %>
+</ul>

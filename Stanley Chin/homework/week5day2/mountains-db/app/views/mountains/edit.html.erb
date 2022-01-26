@@ -1,0 +1,37 @@
+<h2>Edit Monstrous Killer - <%= @mountain.name %></h2>
+
+<h3>Add New Killer</h3>
+
+
+<%= form_with model: @mountain, local: true do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+
+    <%= f.label :image_url %>
+    <%= f.text_field :location %>
+    <br>
+
+    <%= f.label :height %>
+    <%= f.text_field :height %>
+    <br>
+
+
+    <%= f.label :deaths %>
+    <%= f.text_field :deaths %>
+    <br>
+
+
+    <%= f.label :climbed %>
+    <%= f.text_field :climbed %>
+    <br>
+
+
+    <%= f.label :image_url, 'Image URL' %>
+    <%= f.text_field :image_url %>
+    <br>
+
+    <%= f.submit %>
+
+<% end  %>

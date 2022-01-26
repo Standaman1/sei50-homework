@@ -1,0 +1,17 @@
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+a:visited {
+
+    color: whitesmoke;
+}
+
+.bullets{
+
+    list-style-type: none;
+
+}

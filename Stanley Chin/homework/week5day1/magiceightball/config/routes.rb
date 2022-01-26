@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'magiceightballs#home'
 
-  get 'magiceightballs/:questionasked' => 'magiceightballs#question'
+  get '/magiceightballs/:questionasked' => 'magiceightballs#question'
 
 
 end

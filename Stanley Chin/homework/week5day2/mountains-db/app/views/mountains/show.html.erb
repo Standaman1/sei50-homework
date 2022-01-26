@@ -1,0 +1,28 @@
+<h2>KILLER <%= @mountain.name.upcase %></h2>
+
+<!-- <%= @mountain.to_json %> -->
+<%= link_to 'Edit', edit_mountain_path(@mountain.id) %>
+
+<%= link_to 'Delete', destroy_mountain_path(@mountain.id) %>
+
+<p>
+    <strong>Location of Murders:</strong>
+    <%= @mountain.location %>
+</p>
+
+<p>
+    <strong>Height of Murderer:</strong>
+    <%= @mountain.height %> metres
+</p>
+
+<p>
+    <strong>Body Count:</strong>
+    <%= @mountain.deaths %> dead :'(
+</p>
+
+<p>
+    <strong>People Mercifully Allowed to Live:</strong>
+    <%= @mountain.climbed %> >:(
+</p>
+
+<%= image_tag @mountain.image_url, alt: @mountain.name %>
