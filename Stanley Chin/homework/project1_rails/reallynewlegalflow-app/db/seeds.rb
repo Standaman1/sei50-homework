@@ -41,3 +41,18 @@ top3.documents << docu5 << docu6
 puts "Testing topic -< documents association:"
 puts "  • the documents '#{Document.first.title}' is on the topic '#{ Document.first.topic.area}' "
 puts "  • the topic '#{ Topic.last.area}' has the document: #{ Topic.last.documents.pluck(:title).join(', ') }  "
+
+#-------------User
+
+print "Creating Users..."
+
+User.destroy_all
+
+u1 = User.create! name: 'Stanley Chin', email: 's@hotmail.com', role: 'lawyer'
+u2 = User.create! name: 'Liesel Pirece', email: 'l@hotmail.com', role: 'lawyer'
+u3 = User.create! name: 'Amy Chin', email: 'a@hotmail.com', role: 'client'
+u4 = User.create! name: 'Robert Chin', email: 'r@hotmail.com', role: 'client'
+u5 = User.create! name: 'Deborah Chin', email: 'd@hotmail.com', role: 'client'
+
+puts "created #{User.count} users"
+
